@@ -21,6 +21,7 @@ Vagrant.configure("2") do |config|
       node.vm.network :forwarded_port, guest: 9200, host: 9200, id: '9200', auto_correct: true
       node.vm.network :forwarded_port, guest: 9300, host: 9300, id: '9300', auto_correct: true
       node.vm.network :forwarded_port, guest: 3000, host: 3000, id: 'Grafana', auto_correct: true
+      node.vm.network :forwarded_port, guest: 8086, host: 8086, id: 'Influxdb', auto_correct: true
   #
       node.vm.synced_folder ".", "/home/vagrant/tecdev-2765"
   #
